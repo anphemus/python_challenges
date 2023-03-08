@@ -1,3 +1,5 @@
+from os import system;
+system('cls');
 opcion = 1;
 while opcion != 0:
     print('***Escoger tipo de ejercicio***');
@@ -6,6 +8,7 @@ while opcion != 0:
     print('0. Salir');
     print('******************************** \n\n')
     opcion = int(input('Escoger la opción: '));
+    system('cls');
     if opcion == 1:
         opcionRetoLista = 1;
         while opcionRetoLista != 0:
@@ -17,13 +20,15 @@ while opcion != 0:
             print('0. Salir');
             print('********************************\n')
             opcionRetoLista = int(input('Escoger la opción: '));
+            system('cls');
             if(opcionRetoLista == 1):
                 tamañoLista = int(input('Tamaño de la lista:'));
                 lista = [];
                 for i in range(1,tamañoLista+1,1):
                     lista.append(i*7)
                 print(lista);
-                input('Finalizar...');
+                input('Presiona cualquier tecla para continuar...');
+                system('cls');
             elif(opcionRetoLista == 2):
                 tamañoLista = int(input('Tamaño de la lista:'));
                 lista = [];
@@ -31,14 +36,19 @@ while opcion != 0:
                     lista.append(int(input('Digite el numero: ')));
                 print(lista);
                 input('Finalizar...');
+                system('cls');
             elif(opcionRetoLista == 3):
                 tamañoLista = 8;
                 lista = [];
+                listaInvertida = [];
                 for i in range(tamañoLista):
                     lista.append(input('Digite la ciudad: '));
-                lista.reverse();
-                print(lista);
+                for elementoLista in lista:
+                    listaInvertida.insert(0,elementoLista);
+                print(f'Lista ingresada: {lista}');
+                print(f'Lista invertida: {listaInvertida}');
                 input('Finalizar...');
+                system('cls');
             elif(opcionRetoLista == 4):
                 tamañoLista = 20;
                 lista = [];
@@ -56,8 +66,10 @@ while opcion != 0:
                 else:
                     print('El número no se encontró');     
                 input('Finalizar...');
+                system('cls');
             else:
-                print('Esta opción no esta caremonda');
+                system('cls');
+                
     elif opcion == 2:
         opcionRetoWhile = 1;
         while opcionRetoWhile != 0:
@@ -69,8 +81,11 @@ while opcion != 0:
             print('0. Salir');
             print('********************************\n')
             opcionRetoWhile = int(input('Escoger la opción: '));
+            system('cls');
             
     
 
-print('********************************')
-print('Programa finalizado.')
+print('**************************')
+print('***Programa finalizado.***')
+print('**************************')
+input();
