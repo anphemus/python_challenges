@@ -1,4 +1,5 @@
 from os import system;
+import math;
 system('cls');
 opcion = 1;
 while opcion != 0:
@@ -43,7 +44,7 @@ while opcion != 0:
                 listaInvertida = [];
                 for i in range(tamañoLista):
                     lista.append(input('Digite la ciudad: '));
-                for elementoLista in lista:
+                for elementoLista in lista: 
                     listaInvertida.insert(0,elementoLista);
                 print(f'Lista ingresada: {lista}');
                 print(f'Lista invertida: {listaInvertida}');
@@ -82,8 +83,69 @@ while opcion != 0:
             print('********************************\n')
             opcionRetoWhile = int(input('Escoger la opción: '));
             system('cls');
-            
-    
+            if(opcionRetoWhile == 1):
+                suma = 0;
+                numero = 1;
+                while numero >= 0:
+                    numero = int(input("Ingrese otro número entero positivo: "))
+                    suma += numero
+                print("La suma de los números ingresados es:", suma);
+                input('Finalizar...');
+                system('cls');
+            elif(opcionRetoWhile == 2) :
+                while True:
+                 print("Menú:")
+                 print("0: Salida")
+                 print("1: Encuentre si el número es múltiplo de 2")
+                 print("2: Encuentre la raíz cuadrada del número")
+                 print("3: Sume 100 al número ingresado")
+                 print("4: Eleve a la 2 el número ingresado")
+                 opcion = int(input("Ingrese una opción: "))
+                 system('cls')
+                 if opcion == 0:
+                     print("¡Hasta luego!")
+                     break
+                 numero = int(input("Ingrese un número natural: "))
+                 if opcion == 1:
+                     if numero % 2 == 0:
+                         print("El número es múltiplo de 2")
+                     else:
+                         print("El número no es múltiplo de 2")
+                     input('Finalizar...')
+                     system('cls')
+                 elif opcion == 2:
+                     raiz_cuadrada = math.sqrt(numero)
+                     print("La raíz cuadrada de", numero, "es:", raiz_cuadrada)
+                     input('Finalizar...');
+                     system('cls');
+                 elif opcion == 3:
+                     numero += 100
+                     print("El resultado de sumar 100 a", numero - 100, "es:", numero)
+                     input('Finalizar...');
+                     system('cls');
+                 elif opcion == 4:
+                     numero_cuadrado = numero ** 2
+                     print("El resultado de elevar", numero, "a la 2 es:", numero_cuadrado)
+                     input('Finalizar...');
+                     system('cls');
+                 else:
+                     print("Opción inválida. Intente de nuevo.")
+                
+                system('cls');
+            elif(opcionRetoWhile == 3):
+                for i in range(1, 201, 12):
+                    print(i)
+                input('Finalizar...');
+                system('cls');
+            elif(opcionRetoWhile ==4):
+                contador_negativos = 0
+                for i in range(20):
+                 numero = int(input("Ingrese un número: "))
+                 if numero < 0:
+                     contador_negativos += 1
+                print("Se ingresaron", contador_negativos, "números negativos.")
+                input('Finalizar...');
+                system('cls');
 
 print('**************************')
 print('***Programa finalizado.***')
